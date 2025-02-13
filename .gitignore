@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build / Dist
+build/
+dist/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# React
+/.eslintcache
+/public/static
+/public/build
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+# Testing
+/coverage/
+/jest-cache/
+/jest-output/
+
+# Misc
+*.bak
+*.swp
+*.swo
