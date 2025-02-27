@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('projet_dev', 'root', '', {
     host: 'localhost',
     direct: 'mysql',
+    port: 3306
 });
 
 const connectBDD = async () => {
