@@ -5,42 +5,6 @@ const sequelize = new Sequelize('projet_dev', 'root', 'root', {
     port: 8889,
 });
 
-// Modèles pour chaque table
-const Type = sequelize.define('Type', {
-    trait_type: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    rarity: {
-        type: DataTypes.DECIMAL(5, 2),
-        allowNull: false,
-    },
-});
-
-const Background = sequelize.define('Background', {
-    trait_type: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    rarity: {
-        type: DataTypes.DECIMAL(5, 2),
-        allowNull: false,
-    },
-});
-
-const Expression = sequelize.define('Expression', {
-    trait_type: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    rarity: {
-        type: DataTypes.DECIMAL(5, 2),
-        allowNull: false,
-    },
-});
-
-// Répétez pour les autres tables (Hair, Hat, Extra, Glasses, Clothes, Pets, Backpack_Loadout, Face_Accessories)...
-
 const connectBDD = async () => {
     try {
         await sequelize.authenticate();
@@ -54,47 +18,18 @@ const connectBDD = async () => {
     }
 };
 
-module.exports = { sequelize, connectBDD, Type, Background, Expression /*, autres modèles... */ };
+module.exports = { sequelize, connectBDD, Type, Background, Expression,Hair,Hat,Extra,Glasses,Clothes,Pets,BackpackLoadout,FaceAccessories};
 const fs = require('fs');
 
-const data = JSON.parse(fs.readFileSync('data/rarity.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('./data/rarity.json', 'utf8'));
+const metadataData = JSON.parse(fs.readFileSync('./data/metadatas.json', 'utf8'));
 
-const insertData = async () => {
-    try {
-        await connectBDD();
 
-        // Insertion des données dans la table Type
-        for (const item of data.Type) {
-            await Type.create({
-                trait_type: item.trait_type,
-                rarity: item.rarity,
-            });
-        }
-
-        // Insertion des données dans la table Background
-        for (const item of data.Background) {
-            await Background.create({
-                trait_type: item.trait_type,
-                rarity: item.rarity,
-            });
-        }
-
-        // Insertion des données dans la table Expression
-        for (const item of data.Expression) {
-            await Expression.create({
-                trait_type: item.trait_type,
-                rarity: item.rarity,
-            });
-        }
-
-        // Répétez pour les autres tables (Hair, Hat, Extra, Glasses, Clothes, Pets, Backpack_Loadout, Face_Accessories)...
-
-        console.log("Données insérées avec succès");
-    } catch (error) {
-        console.error("Erreur lors de l'insertion des données : ", error);
-    } finally {
-        await sequelize.close();
-    }
-};
+console.log('data:', data);
+console.log('BackpackLoadout:', data.BackpackLoadout);
+  
+  // Établir la relation one-to-many
+  RarityModel.hasMany(MetadataModel);
+  MetadataModel.belongsTo(RarityModel);
 
 insertData();
