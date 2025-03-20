@@ -1,0 +1,41 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 15%;
+    background-color:#193131;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2vw;
+    margin-top: 1vw;
+    border: solid 0.3vw rgb(255, 255, 255);
+    box-shadow: inset 0 0 1em rgb(255, 255, 255);
+    column-gap: 5vw;
+    padding: 1vw;
+}
+
+.nav a{
+    font-size: 2.5vw;
+    color: white;
+    text-decoration: none;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 1vw;
+}
+
+.nav .link{
+    transition: ease-in-out 0.3s;
+}
+
+.nav .link:hover{
+    background-color: white;
+    color: black;
+}
+
+.nav img{
+    width: 3.5vw;
+}
+
+.nav .home{
+    border: solid 0.1vw white;
+}

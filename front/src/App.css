@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+body{
+  background-color: #224343;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.main-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vw;
+}
+
+.main-content .pack{
+  width: 40%;
+  height: 60vh;
+  border: solid 0.3vw white;
+  border-radius: 2vw;
+}
+
+.main-content .pack h1, .main-content .pack h2{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content .pack h1{
+  margin-left: 1vw;
+  font-size: 1.8vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-content .pack .pack-opening{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-content .pack .pack-opening div{
+  width: 45%;
+}
+
+.main-content .pack h2{
+  font-size: 1.4vw;
+}
+
+.main-content .locked-cards{
+  width: 40%;
+  height: 60vh;
+  border: solid 0.3vw white;
+  border-radius: 2vw;
 }
