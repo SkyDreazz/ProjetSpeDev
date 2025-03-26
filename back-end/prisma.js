@@ -10,7 +10,7 @@ const newData = [];
 // for (const [key, value] of Object.entries(data)) {
 //     const attribute = {trait_type:key,}
 //     value.forEach((att)=>{
-//         newData.push({...attribute,value: att.trait_type,rarity: parseInt(att.rarity, 10)})
+//         newData.push({...attribute,value: atnotrait_type,rarity: parseInt(att.rarity, 10)})
 //     })
 //   }
 
