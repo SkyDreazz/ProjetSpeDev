@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 // Lancer le serveur
-const port = 3000;  // Port d'écoute
+const port = 5000;  // Port d'écoute
 app.listen(port, () => {
     console.log(`Serveur lancé sur http://localhost:${port}`);
 });

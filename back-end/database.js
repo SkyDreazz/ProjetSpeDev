@@ -1,4 +1,6 @@
     const { Sequelize, DataTypes } = require('sequelize');
+    const { PrismaClient } = require('@prisma/client');
+    const prisma = new PrismaClient();
     const sequelize = new Sequelize('projet_dev', 'root', '', {
         host: 'localhost',
         dialect: 'mysql',
