@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import de Re
 import App from './App.tsx';
 import reportWebVitals from './reportWebVitals.js';
 import { Cards } from './pages/cards/cards.tsx';
+import { User } from './pages/user/user.tsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/home" element={<App />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
