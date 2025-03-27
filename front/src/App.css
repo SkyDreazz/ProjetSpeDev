@@ -1,0 +1,55 @@
+body{
+  background-color: #224343;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vw;
+}
+
+.main-content .pack{
+  width: 40%;
+  height: 60vh;
+  border: solid 0.3vw white;
+  border-radius: 2vw;
+}
+
+.main-content .pack h1, .main-content .pack h2{
+  color: white;
+}
+
+.main-content .pack h1{
+  margin-left: 1vw;
+  font-size: 1.8vw;
+}
+
+.main-content .pack .pack-opening{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-content .pack .pack-opening div{
+  width: 45%;
+}
+
+.main-content .pack h2{
+  font-size: 1.4vw;
+}
+
+.main-content .locked-cards{
+  width: 40%;
+  height: 60vh;
+  border: solid 0.3vw white;
+  border-radius: 2vw;
+}
