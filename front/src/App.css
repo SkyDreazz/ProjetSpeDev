@@ -52,4 +52,18 @@ body{
   height: 60vh;
   border: solid 0.3vw white;
   border-radius: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2vw;
+}
+
+.main-content .locked-cards img{
+  width: 10vw;
+}
+
+.main-content .locked-cards .cardName{
+  color: white;
 }
