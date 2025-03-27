@@ -8,17 +8,26 @@ datasource db {
 }
 
 
-model Attribut {
+model attribut {
   id   Int @id @default(autoincrement())
   trait_type String @db.VarChar(255)
   value String @db.VarChar(255)
   rarity Float
+  card card[] @relation("relation_card")
 }
 
-model Card{
+model card{
   id Int @id @default(autoincrement())
-  token_id Int
+  token_id Int @unique
   name String @db.VarChar(255)
   description String @db.VarChar(255)
   image String @db.VarChar(255)
+  attributes attribut[] @relation("relation_card")
+}
+
+model register{
+  id Int @id @default(autoincrement())
+  email String @unique
+  password String @unique
+  createdAt DateTime @default(now())
 }
