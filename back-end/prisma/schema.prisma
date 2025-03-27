@@ -25,9 +25,11 @@ model card{
   attributes attribut[] @relation("relation_card")
 }
 
-model register{
-  id Int @id @default(autoincrement())
-  email String @unique
-  password String @unique
-  createdAt DateTime @default(now())
-}
+model User {
+    id        Int      @id @default(autoincrement())
+    email     String   @unique
+    password  String
+    createdAt DateTime @default(now())
+  }
+
+
